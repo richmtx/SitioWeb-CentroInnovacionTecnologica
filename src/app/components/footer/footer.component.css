@@ -72,7 +72,7 @@
 .footer-right {
   display: flex;
   flex-direction: column; 
-  gap: 40px;
+  gap: 10px;
   align-items: center;   
   text-align: center;
   transform: translateX(-40px);
