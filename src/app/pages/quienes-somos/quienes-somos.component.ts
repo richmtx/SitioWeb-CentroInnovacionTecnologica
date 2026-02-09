@@ -1,8 +1,9 @@
 import { Component } from '@angular/core';
+import { FooterComponent } from "../../components/footer/footer.component";
 
 @Component({
   selector: 'app-quienes-somos',
-  imports: [],
+  imports: [FooterComponent],
   templateUrl: './quienes-somos.component.html',
   styleUrl: './quienes-somos.component.css'
 })
