@@ -1,6 +1,107 @@
 
 /*****************************************************************/
 
+/* SECCIÓN NOTICIAS */
+
+.news-section {
+  padding: 100px 20px;
+  background-color: #ffffff;
+}
+
+.news-container {
+  max-width: 1300px;
+  margin: 0 auto;
+}
+
+.news-header {
+  text-align: center;
+  margin-bottom: 60px;
+}
+
+.news-header h2 {
+  font-size: 2.8rem;
+  font-weight: 700;
+  color: #000;
+}
+
+.news-header p {
+  margin-top: 10px;
+  font-size: 1.1rem;
+  color: #000;
+}
+
+.news-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 30px;
+}
+
+.news-card {
+  background: #ffffff;
+  border-radius: 16px;
+  overflow: hidden;
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.06);
+  transition: transform 0.4s ease, box-shadow 0.4s ease;
+}
+
+.news-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 30px 60px rgba(0, 0, 0, 0.12);
+}
+
+.news-image {
+  position: relative;
+  overflow: hidden;
+}
+
+.news-image img {
+  width: 100%;
+  height: 220px;
+  object-fit: cover;
+  transition: transform 0.5s ease;
+}
+
+.news-card:hover .news-image img {
+  transform: scale(1.08);
+}
+
+.news-category {
+  position: absolute;
+  top: 16px;
+  left: 16px;
+  background: rgba(15, 23, 42, 0.85);
+  color: #fff;
+  padding: 6px 14px;
+  font-size: 0.75rem;
+  border-radius: 20px;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.news-content {
+  padding: 26px;
+}
+
+.news-date {
+  font-size: 0.85rem;
+  color: #64748b;
+}
+
+.news-content h3 {
+  margin: 12px 0;
+  font-size: 1.25rem;
+  color: #000;
+  line-height: 1.4;
+}
+
+.news-content p {
+  font-size: 0.95rem;
+  color: #475569;
+  line-height: 1.6;
+}
+
+/*****************************************************************/
+
 /* SECCIÓN EVENTOS */
 
 .events-section {
@@ -9,7 +110,7 @@
 }
 
 .events-container {
-  max-width: 1200px;
+  max-width: 1300px;
   margin: 0 auto;
 }
 
@@ -19,7 +120,7 @@
 }
 
 .events-header h2 {
-  font-size: 2.6rem;
+  font-size: 2.8rem;
   font-weight: 700;
   color: #000;
 }
@@ -77,19 +178,19 @@
 }
 
 .event-content h3 {
-  font-size: 1.35rem;
+  font-size: 1.7rem;
   color: #000;
   margin-bottom: 6px;
 }
 
 .event-location {
-  font-size: 0.9rem;
+  font-size: 1rem;
   color: #64748b;
 }
 
 .event-content p {
   margin: 12px 0 16px;
-  font-size: 0.95rem;
+  font-size: 1.1rem;
   color: #475569;
   line-height: 1.6;
 }
@@ -145,7 +246,6 @@
 .reveal-event:nth-child(4) {
   transition-delay: 0.55s;
 }
-
 
 /* DISEÑO RESPONSIVO */
 
