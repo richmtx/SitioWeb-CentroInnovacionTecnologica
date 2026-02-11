@@ -1,2 +1,352 @@
+<!-- TÍTULO -->
+<section class="hero-title">
+    <div class="hero-content">
+        <h1 class="hero-bg">CAPACITACIÓN</h1>
+
+        <div class="hero-front">
+            <span class="hero-subtitle">Coordinación</span>
+            <div class="hero-line"></div>
+        </div>
+    </div>
+</section>
+
+
+<!-- SECCIÓN IMAGEN VISUAL -->
+<section class="media-banner">
+
+    <img src="/assets/CIT-Dia.jpeg" alt="Banner visual" class="media-bg">
+
+    <div class="media-overlay">
+        <p>Impulsamos el crecimiento integral de personas y organizaciones a través de capacitaciones, certificaciones y
+            el desarrollo de habilidades blandas.<br>
+            Diseñamos experiencias de aprendizaje que fortalecen conocimientos técnicos, validan competencias
+            profesionales
+            y potencian el desarrollo humano
+        </p>
+    </div>
+
+</section>
+
+
+<!-- CERTIFICACIONES -->
+<section class="certifications">
+
+    <div class="certifications-header">
+        <h2>Certificaciones</h2>
+
+        <div class="certifications-controls">
+            <button class="arrow left" (click)="scrollPrev()">
+                <i class="fas fa-chevron-left"></i>
+            </button>
+            <button class="arrow right" (click)="scrollNext()">
+                <i class="fas fa-chevron-right"></i>
+            </button>
+        </div>
+    </div>
+
+    <div class="certifications-track" #certTrack>
+
+        <article class="cert-card">
+            <img src="/assets/diseñob.png" alt="Diseño Básico">
+            <div class="cert-overlay">
+                <p>Valida las habilidades fundamentales para crear<br>croquis, modelos 3D, ensamblajes y
+                    dibujos<br>técnicos.
+                </p>
+            </div>
+            <span class="cert-label">Diseño Básico</span>
+        </article>
+
+        <article class="cert-card">
+            <img src="/assets/diseñop.jpeg" alt="Diseño Profesional">
+            <div class="cert-overlay">
+                <p>Acredita un dominio avanzado en modelado 3D,<br>ensamblajes complejos y generación de
+                    planos<br>técnicos.
+                </p>
+            </div>
+            <span class="cert-label">Diseño Profesional</span>
+        </article>
+
+        <article class="cert-card">
+            <img src="/assets/nom.png" alt="NOM ECO680">
+            <div class="cert-overlay">
+                <p>Certifica el cumplimiento de normas ambientales<br>en la industria, enfocándose en la
+                    eficiencia<br>energética y la reducción de emisiones.</p>
+            </div>
+            <span class="cert-label">NOM ECO680</span>
+        </article>
+
+        <article class="cert-card">
+            <img src="/assets/greenbelt.jpg" alt="Green Belt">
+            <div class="cert-overlay">
+                <p>Capacita en la mejora de procesos, reducción de<br>defectos y aumento de eficiencia
+                    mediante<br>herramientas de mejora continua.</p>
+            </div>
+            <span class="cert-label">Green Belt</span>
+        </article>
+
+        <article class="cert-card">
+            <img src="/assets/yellowbelt.jpg" alt="Yellow Belt">
+            <div class="cert-overlay">
+                <p>Introduce a los profesionales en la mejora de<br>procesos, enfocándose en comprender y aplicar<br>las
+                    herramientas básicas de mejora continua.</p>
+            </div>
+            <span class="cert-label">Yellow Belt</span>
+        </article>
+
+    </div>
+
+</section>
+
+
+<!-- CAPACITACIONES -->
+<section class="courses-section">
+
+    <h2 class="courses-title">Capacitaciones</h2>
+
+    <div class="courses-grid">
+
+        <!-- 1 -->
+        <article class="course-card large2" #courseCard>
+            <img src="imagenes/uno.jpeg" alt="">
+            <div class="course-info">
+                <h3>Herramientas de IA para tu negocio</h3>
+                <p>Optimiza procesos y toma decisiones estratégicas.</p>
+            </div>
+        </article>
+
+        <!-- 2 -->
+        <article class="course-card large2" #courseCard>
+            <img src="imagenes/dos.jpeg" alt="">
+            <div class="course-info">
+                <h3>Conecta con tus clientes con IA</h3>
+                <p>Experiencias personalizadas y respuestas inteligentes.</p>
+            </div>
+        </article>
+
+        <!-- 3 -->
+        <article class="course-card large2" #courseCard>
+            <img src="imagenes/tres.jpg" alt="">
+            <div class="course-info">
+                <h3>IA aplicada a ventas</h3>
+                <p>Automatización y conversión.</p>
+            </div>
+        </article>
+
+        <!-- 4 -->
+        <article class="course-card large2" #courseCard>
+            <img src="imagenes/cuatro.jpg" alt="">
+            <div class="course-info">
+                <h3>Desarrollo Web desde cero (IA)</h3>
+                <p>Crea sitios modernos apoyándote en IA.</p>
+            </div>
+        </article>
+
+        <!-- 5 -->
+        <article class="course-card medium" #courseCard>
+            <img src="imagenes/cinco.jpeg" alt="">
+            <div class="course-info">
+                <h3>Creación de Apps Móviles</h3>
+                <p>Diseño y desarrollo de apps modernas.</p>
+            </div>
+        </article>
+
+        <!-- 6 -->
+        <article class="course-card medium" #courseCard>
+            <img src="imagenes/seis.jpg" alt="">
+            <div class="course-info">
+                <h3>Programación de PLCs</h3>
+                <p>Automatización industrial.</p>
+            </div>
+        </article>
+
+        <!-- 7 -->
+        <article class="course-card full" #courseCard>
+            <img src="imagenes/siete.jpg" alt="">
+            <div class="course-info">
+                <h3>Finanzas para estudiantes</h3>
+                <p>Gestión responsable del dinero.</p>
+            </div>
+        </article>
+
+        <!-- 8 -->
+        <article class="course-card medium" #courseCard>
+            <img src="imagenes/ocho.jpg" alt="">
+            <div class="course-info">
+                <h3>Liderazgo disruptivo</h3>
+                <p>Creatividad y toma de decisiones.</p>
+            </div>
+        </article>
+
+        <!-- 9 -->
+        <article class="course-card medium" #courseCard>
+            <img src="imagenes/nueve.jpg" alt="">
+            <div class="course-info">
+                <h3>AutoCAD</h3>
+                <p>Diseño técnico 2D y 3D.</p>
+            </div>
+        </article>
+
+        <!-- 10 -->
+        <article class="course-card large2" #courseCard>
+            <img src="imagenes/diez.jpg" alt="">
+            <div class="course-info">
+                <h3>Excel Básico, Intermedio y Avanzado</h3>
+                <p>Análisis y automatización de datos.</p>
+            </div>
+        </article>
+
+        <!-- 11 -->
+        <article class="course-card large2" #courseCard>
+            <img src="imagenes/once.jpg" alt="">
+            <div class="course-info">
+                <h3>Impresión 3D</h3>
+                <p>Fabricación aditiva.</p>
+            </div>
+        </article>
+
+        <!-- 12 -->
+        <article class="course-card large2" #courseCard>
+            <img src="imagenes/doce.jpg" alt="">
+            <div class="course-info">
+                <h3>Minitab</h3>
+                <p>Análisis estadístico.</p>
+            </div>
+        </article>
+
+        <!-- 13 -->
+        <article class="course-card large2" #courseCard>
+            <img src="imagenes/trece.jpg" alt="">
+            <div class="course-info">
+                <h3>Core Tools</h3>
+                <p>Mejora continua.</p>
+            </div>
+        </article>
+
+        <!-- 14 -->
+        <article class="course-card full" #courseCard>
+            <img src="imagenes/catorce.jpg" alt="">
+            <div class="course-info">
+                <h3>ISO 9001</h3>
+                <p>Sistemas de calidad.</p>
+            </div>
+        </article>
+
+        <!-- 15 -->
+        <article class="course-card large" #courseCard>
+            <img src="imagenes/quince.jpeg" alt="">
+            <div class="course-info">
+                <h3>IA en ciencias básicas</h3>
+                <p>Modelado y predicción.</p>
+            </div>
+        </article>
+
+        <!-- 16 -->
+        <article class="course-card medium" #courseCard>
+            <img src="imagenes/diez6.jpeg" alt="">
+            <div class="course-info">
+                <h3>Internet de las cosas y análisis de datos</h3>
+                <p>Datos en tiempo real.</p>
+            </div>
+        </article>
+
+        <!-- 17 -->
+        <article class="course-card large" #courseCard>
+            <img src="imagenes/diez7.jpg" alt="">
+            <div class="course-info">
+                <h3>Uso y aplicación del SAC</h3>
+                <p>Gestión empresarial.</p>
+            </div>
+        </article>
+
+        <!-- 18 -->
+        <article class="course-card medium" #courseCard>
+            <img src="imagenes/diez8.jpg" alt="">
+            <div class="course-info">
+                <h3>Industria 4.0</h3>
+                <p>Automatización avanzada.</p>
+            </div>
+        </article>
+
+        <!-- 19 -->
+        <article class="course-card large" #courseCard>
+            <img src="imagenes/diez9.jpg" alt="">
+            <div class="course-info">
+                <h3>Frameworks</h3>
+                <p>Desarrollo de software.</p>
+            </div>
+        </article>
+
+        <!-- 20 -->
+        <article class="course-card medium" #courseCard>
+            <img src="imagenes/veinte.jpg" alt="">
+            <div class="course-info">
+                <h3>Power BI</h3>
+                <p>Visualización de datos.</p>
+            </div>
+        </article>
+
+        <!-- 21 -->
+        <article class="course-card full" #courseCard>
+            <img src="imagenes/veintiuno.jpg" alt="">
+            <div class="course-info">
+                <h3>Ciencia de datos con R</h3>
+                <p>Análisis y predicción.</p>
+            </div>
+        </article>
+
+        <!-- 22 -->
+        <article class="course-card medium" #courseCard>
+            <img src="imagenes/veintidos.jpg" alt="">
+            <div class="course-info">
+                <h3>CONTPAQi</h3>
+                <p>Gestión contable y fiscal.</p>
+            </div>
+        </article>
+
+        <!-- 23 -->
+        <article class="course-card medium" #courseCard>
+            <img src="imagenes/veintitres.jpg" alt="">
+            <div class="course-info">
+                <h3>Neuroeducación</h3>
+                <p>Aprendizaje y desarrollo cognitivo.</p>
+            </div>
+        </article>
+
+    </div>
+</section>
+
+
+<!-- HABILIDADES BLANDAS -->
+<section class="soft-skills-section">
+    <div class="soft-skills-container">
+
+        <div class="soft-skills-header">
+            <h2>Habilidades Blandas</h2>
+            <p>Competencias clave para el desarrollo personal, profesional y organizacional.</p>
+        </div>
+
+        <div class="soft-skills-grid">
+
+            <div class="skill-card">Autoestima</div>
+            <div class="skill-card">Superación personal</div>
+            <div class="skill-card">Gestión del tiempo</div>
+            <div class="skill-card">Redacción y ortografía</div>
+            <div class="skill-card">Comunicación efectiva</div>
+            <div class="skill-card">El arte de hablar en público</div>
+            <div class="skill-card">Resolución de conflictos</div>
+            <div class="skill-card">Rapport en el servicio al cliente</div>
+            <div class="skill-card">Gestión de Riesgos Psicosociales</div>
+            <div class="skill-card">Estrés laboral</div>
+            <div class="skill-card">Satisfacción Laboral</div>
+            <div class="skill-card">Liderazgo</div>
+            <div class="skill-card">Trabajo en equipo</div>
+            <div class="skill-card">Integración de equipos de trabajo en entorno laboral</div>
+            <div class="skill-card">Inclusión social y accesibilidad en el servicio público</div>
+            <div class="skill-card">Organizaciones exitosas</div>
+
+        </div>
+    </div>
+</section>
+
 
 <app-footer></app-footer>
