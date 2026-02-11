@@ -1,3 +1,4 @@
+
 <!-- TÍTULO -->
 <section class="hero-title">
     <div class="hero-content">
@@ -28,22 +29,22 @@
 <!-- SECCIÓN NUESTROS SERVICIOS -->
 <section class="info-section">
 
-    <div class="info-titulo">
-        <h2>Próximos Eventos</h2>
+    <div class="info-titulo animate-item">
+        <h2>Nuestros servicios</h2>
     </div>
 
     <div class="info-container">
 
         <div class="column left">
 
-            <div class="text-box fade-up">
+            <div class="text-box animate-item">
                 <h3>Planeación y gestión de proyectos</h3>
                 <p>
                     Diseño de cronogramas, objetivos y entregables para garantizar resultados.
                 </p>
             </div>
 
-            <div class="image-box fade-left">
+            <div class="image-box animate-item">
                 <img src="/assets/CIT-Noche.jpeg" alt="Imagen descriptiva">
             </div>
 
@@ -51,26 +52,26 @@
 
         <div class="column right">
 
-            <div class="text-box fade-up">
+            <div class="text-box animate-item">
                 <h3>Vinculación UPIDET - CIT</h3>
                 <p>Gestión de servicios especializados en laboratorios, asesorías técnicas y transferencia
                     tecnológica.
                 </p>
             </div>
 
-            <div class="text-box fade-up">
+            <div class="text-box animate-item">
                 <h3>Seguimiento y evaluación</h3>
                 <p>Monitoreo de avances, control de tiempos y recursos, así como reportes periódicos para la
                     toma de decisiones.</p>
             </div>
 
-            <div class="text-box fade-up">
+            <div class="text-box animate-item">
                 <h3>Asesoría Integral</h3>
                 <p>Adaptación de las metodologías a las necesidades de cada proyecto. Acompañamiento en procesos de
                     innovación, desarrollo de productos, mejora de operaciones y estrategias de crecimiento.</p>
             </div>
 
-            <div class="text-box fade-up">
+            <div class="text-box animate-item">
                 <h3>Conexión Industria - Academia</h3>
                 <p>Impulso a la colaboración entre empresas, investigadores, docentes y estudiantes.</p>
             </div>
@@ -150,18 +151,25 @@
     <div class="carousel-header">
         <h2>Proyectos Destacados</h2>
     </div>
+
     <div class="carousel-track-container">
-        <div class="carousel-track">
-            <img src="/assets/cimadC.png" class="carousel-slide active" alt="Imagen 1">
+        <div class="carousel-track" [style.transform]="'translateX(-' + currentIndex * 100 + '%)'">
+            <img src="/assets/cimadC.png" class="carousel-slide" alt="Imagen 1">
             <img src="/assets/mezcalC.png" class="carousel-slide" alt="Imagen 2">
             <img src="/assets/mueblerasC.png" class="carousel-slide" alt="Imagen 3">
         </div>
     </div>
 
     <div class="carousel-controls">
-        <button class="arrow left disabled">‹</button>
-        <button class="arrow right">›</button>
+        <button class="arrow left" (click)="prevSlide()" [class.disabled]="currentIndex === 0">
+            ‹
+        </button>
+
+        <button class="arrow right" (click)="nextSlide()" [class.disabled]="currentIndex === totalSlides - 1">
+            ›
+        </button>
     </div>
+
 </section>
 
 

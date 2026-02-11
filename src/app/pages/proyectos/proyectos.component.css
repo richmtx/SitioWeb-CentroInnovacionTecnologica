@@ -360,27 +360,15 @@
   border-radius: 18px;
 }
 
-.fade-up,
-.fade-left {
-  opacity: 1;
-  transform: translate(0, 0);
-}
-
-.js-enabled .fade-up {
+.animate-item {
   opacity: 0;
   transform: translateY(40px);
-  transition: opacity 0.8s ease, transform 0.8s ease;
+  transition: all 0.8s ease;
 }
 
-.js-enabled .fade-left {
-  opacity: 0;
-  transform: translateX(-60px);
-  transition: opacity 1s ease, transform 1s ease;
-}
-
-.show {
-  opacity: 1 !important;
-  transform: translate(0, 0) !important;
+.animate-item.visible {
+  opacity: 1;
+  transform: translateY(0);
 }
 
 @media (max-width: 900px) {

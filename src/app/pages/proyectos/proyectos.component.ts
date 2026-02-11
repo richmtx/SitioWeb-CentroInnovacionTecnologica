@@ -1,4 +1,4 @@
-import { Component, AfterViewInit, Inject, PLATFORM_ID } from '@angular/core';
+import { Component, AfterViewInit, ElementRef, Inject, PLATFORM_ID } from '@angular/core';
 import { isPlatformBrowser } from '@angular/common';
 import { FooterComponent } from "../../components/footer/footer.component";
 
@@ -10,27 +10,49 @@ import { FooterComponent } from "../../components/footer/footer.component";
 })
 export class ProyectosComponent implements AfterViewInit {
 
-  constructor(@Inject(PLATFORM_ID) private platformId: Object) {}
+  currentIndex: number = 0;
+  totalSlides: number = 3;
+
+  constructor(
+    private el: ElementRef,
+    @Inject(PLATFORM_ID) private platformId: Object
+  ) { }
 
   ngAfterViewInit(): void {
-    if (!isPlatformBrowser(this.platformId)) return;
 
-    document.body.classList.add('js-enabled');
+    if (isPlatformBrowser(this.platformId)) {
 
-    const elements: NodeListOf<HTMLElement> =
-      document.querySelectorAll('.fade-up, .fade-left');
+      const elements = this.el.nativeElement.querySelectorAll('.animate-item');
 
-    const observer = new IntersectionObserver(
-      entries => {
-        entries.forEach(entry => {
+      const observer = new IntersectionObserver((entries) => {
+
+        entries.forEach((entry, index) => {
+
           if (entry.isIntersecting) {
-            (entry.target as HTMLElement).classList.add('show');
+            setTimeout(() => {
+              entry.target.classList.add('visible');
+            }, index * 150);
           }
-        });
-      },
-      { threshold: 0.2 }
-    );
 
-    elements.forEach(el => observer.observe(el));
+        });
+
+      }, { threshold: 0.2 });
+
+      elements.forEach((el: Element) => {
+        observer.observe(el);
+      });
+    }
+  }
+
+  nextSlide(): void {
+    if (this.currentIndex < this.totalSlides - 1) {
+      this.currentIndex++;
+    }
+  }
+
+  prevSlide(): void {
+    if (this.currentIndex > 0) {
+      this.currentIndex--;
+    }
   }
 }
