@@ -1,11 +1,9 @@
-import { 
-  Component, 
-  ViewChild, 
-  ViewChildren,
-  ElementRef, 
-  AfterViewInit, 
-  QueryList 
+import {
+  Component, ViewChild, ViewChildren, ElementRef, AfterViewInit,
+  QueryList, Inject, PLATFORM_ID, OnDestroy
 } from '@angular/core';
+
+import { isPlatformBrowser } from '@angular/common';
 import { FooterComponent } from "../../components/footer/footer.component";
 
 @Component({
@@ -15,18 +13,47 @@ import { FooterComponent } from "../../components/footer/footer.component";
   templateUrl: './capacitaciones.component.html',
   styleUrl: './capacitaciones.component.css'
 })
-export class CapacitacionesComponent implements AfterViewInit {
+export class CapacitacionesComponent implements AfterViewInit, OnDestroy {
 
-  // ===== Carrusel =====
+  constructor(@Inject(PLATFORM_ID) private platformId: Object) { }
+
   @ViewChild('certTrack') certTrack!: ElementRef<HTMLDivElement>;
-  private scrollAmount: number = 420;
-
-  // ===== Intersection Observer =====
   @ViewChildren('courseCard') courseCards!: QueryList<ElementRef<HTMLElement>>;
+
+  private scrollAmount = 420;
+  private observer?: IntersectionObserver;
+
+  private showAllCards(): void {
+    this.courseCards.forEach(card => {
+      card.nativeElement.classList.add('show');
+    });
+  }
 
   ngAfterViewInit(): void {
 
-    const observer = new IntersectionObserver(
+    if (!isPlatformBrowser(this.platformId)) return;
+
+    if (typeof IntersectionObserver === 'undefined') {
+      this.showAllCards();
+      return;
+    }
+
+    setTimeout(() => { 
+      this.initObserver();
+    }, 0);
+  }
+
+  private initObserver(): void {
+
+    if (!this.courseCards || this.courseCards.length === 0) {
+      return;
+    }
+
+    if (this.observer) {
+      this.observer.disconnect();
+    }
+
+    this.observer = new IntersectionObserver(
       (entries, observerInstance) => {
         entries.forEach(entry => {
           if (entry.isIntersecting) {
@@ -35,19 +62,21 @@ export class CapacitacionesComponent implements AfterViewInit {
           }
         });
       },
-      {
-        threshold: 0.25
-      }
+      { threshold: 0.25 }
     );
 
-    // Observamos todas las cards
     this.courseCards.forEach(card => {
-      observer.observe(card.nativeElement);
+      this.observer?.observe(card.nativeElement);
     });
   }
 
-  // ===== Funciones Carrusel =====
+  ngOnDestroy(): void {
+    this.observer?.disconnect();
+  }
+
   scrollNext(): void {
+    if (!isPlatformBrowser(this.platformId) || !this.certTrack) return;
+
     this.certTrack.nativeElement.scrollBy({
       left: this.scrollAmount,
       behavior: 'smooth'
@@ -55,6 +84,8 @@ export class CapacitacionesComponent implements AfterViewInit {
   }
 
   scrollPrev(): void {
+    if (!isPlatformBrowser(this.platformId) || !this.certTrack) return;
+
     this.certTrack.nativeElement.scrollBy({
       left: -this.scrollAmount,
       behavior: 'smooth'
