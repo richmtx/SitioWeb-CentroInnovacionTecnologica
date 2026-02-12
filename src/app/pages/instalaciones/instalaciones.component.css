@@ -1,0 +1,293 @@
+
+/* Título de la sección */
+
+.hero-title {
+  width: 100%;
+  height: 55vh;
+  min-height: 380px;
+  background: #ffffff;
+  display: flex;
+  align-items: center;
+  padding: 0 6%;
+  overflow: hidden;
+}
+
+.hero-content {
+  position: relative;
+  width: 100%;
+}
+
+.hero-bg {
+  font-size: clamp(4rem, 18vw, 8rem);
+  font-weight: 700;
+  color: #611232;
+  letter-spacing: -0.04em;
+  margin: 0;
+  line-height: 1;
+  user-select: none;
+}
+
+.hero-front {
+  position: absolute;
+  left: 5%;
+  bottom: 20%;
+  transform: translateY(80px);
+}
+
+.hero-subtitle {
+  font-size: clamp(1.4rem, 3vw, 2.4rem);
+  font-weight: 300;
+  letter-spacing: 0.4em;
+  color: #000;
+}
+
+.hero-line {
+  width: 160px;
+  height: 5px;
+  background-color: #003366;
+  margin-top: 18px;
+}
+
+/***********************************/
+/******** DISEÑO RESPONSIVO ********/
+/***********************************/
+
+@media (max-width: 1023px) and (min-width: 768px) {
+  .hero-title {
+    height: 50vh;
+    padding: 0 5%;
+    margin-top: 20px;
+  }
+
+  .hero-bg {
+    font-size: clamp(4.5rem, 16vw, 6.5rem);
+  }
+
+  .hero-front {
+    left: 4%;
+    bottom: 14%;
+    transform: translateY(80px);
+  }
+
+  .hero-subtitle {
+    letter-spacing: 0.3em;
+  }
+
+  .hero-line {
+    width: 130px;
+  }
+}
+
+@media (max-width: 767px) and (min-width: 481px) {
+  .hero-title {
+    height: 48vh;
+    min-height: 340px;
+    padding: 0 6%;
+    margin-top: 10px;
+  }
+
+  .hero-bg {
+    font-size: clamp(4rem, 18vw, 5.5rem);
+  }
+
+  .hero-front {
+    left: 4%;
+    bottom: 12%;
+    transform: translateY(70px);
+  }
+
+  .hero-subtitle {
+    font-size: 1.6rem;
+    letter-spacing: 0.28em;
+  }
+
+  .hero-line {
+    width: 110px;
+  }
+}
+
+@media (max-width: 630px) {
+  .hero-title {
+    height: auto;
+    min-height: 340px;
+    padding: 90px 6% 48px;
+  }
+
+  .hero-bg {
+    font-size: clamp(3.8rem, 14vw, 5rem);
+    line-height: 1.05;
+  }
+
+  .hero-front {
+    position: relative;
+    left: 0;
+    bottom: auto;
+    transform: none;
+    margin-top: 32px;
+  }
+
+  .hero-subtitle {
+    font-size: 1.45rem;
+    letter-spacing: 0.24em;
+  }
+
+  .hero-line {
+    width: 100px;
+    height: 4px;
+    margin-top: 14px;
+  }
+}
+
+@media (max-width: 480px) {
+  .hero-title {
+    height: auto;
+    min-height: 320px;
+    padding: 80px 6% 40px;
+    margin-top: 10px;
+  }
+
+  .hero-bg {
+    font-size: 3.8rem;
+  }
+
+  .hero-front {
+    position: relative;
+    left: 0;
+    bottom: auto;
+    transform: none;
+    margin-top: 24px;
+  }
+
+  .hero-subtitle {
+    font-size: 1.3rem;
+    letter-spacing: 0.22em;
+  }
+
+  .hero-line {
+    width: 90px;
+    height: 4px;
+    margin-top: 12px;
+  }
+}
+
+@media (max-width: 436px) {
+  .hero-title {
+    min-height: 320px;
+    padding: 80px 6% 36px;
+  }
+
+  .hero-bg {
+    font-size: 3.5rem;
+    line-height: 1.05;
+    letter-spacing: -0.03em;
+  }
+
+  .hero-front {
+    position: relative;
+    left: 0;
+    bottom: auto;
+    transform: none;
+    margin-top: 26px;
+  }
+
+  .hero-subtitle {
+    font-size: 1.25rem;
+    letter-spacing: 0.2em;
+  }
+
+  .hero-line {
+    width: 88px;
+    height: 3.5px;
+    margin-top: 12px;
+  }
+}
+
+@media (max-width: 360px) {
+  .hero-title {
+    min-height: 300px;
+    padding: 70px 5% 32px;
+    margin-top: 10px;
+  }
+
+  .hero-bg {
+    font-size: 2.9rem;
+    letter-spacing: -0.03em;
+  }
+
+  .hero-front {
+    margin-top: 20px;
+  }
+
+  .hero-subtitle {
+    font-size: 1.15rem;
+    letter-spacing: 0.18em;
+  }
+
+  .hero-line {
+    width: 72px;
+    height: 3px;
+    margin-top: 10px;
+  }
+}
+
+@media (max-width: 320px) {
+  .hero-title {
+    min-height: 280px;
+    padding: 60px 4% 28px;
+  }
+
+  .hero-bg {
+    font-size: 2.6rem;
+  }
+
+  .hero-subtitle {
+    font-size: 1.05rem;
+    letter-spacing: 0.16em;
+  }
+
+  .hero-line {
+    width: 64px;
+  }
+}
+
+/*****************************************************************/
+
+/* SECCIÓN IMAGEN */
+
+.media-banner {
+  position: relative;
+  width: 100%;
+  height: 480px;
+  overflow: hidden;
+}
+
+.media-bg {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.media-overlay {
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.45);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  color: #ffffff;
+  padding: 20px;
+}
+
+.media-overlay h2 {
+  font-size: clamp(1.8rem, 4vw, 2.5rem);
+  margin-bottom: 10px;
+}
+
+.media-overlay p {
+  font-size: clamp(1rem, 2vw, 1.2rem);
+  max-width: 800px;
+}
+
+/*********************************************************************/
