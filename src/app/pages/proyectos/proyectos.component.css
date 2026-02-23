@@ -326,7 +326,7 @@
 .text-box {
   border: 2px solid #e6e6e6;
   padding: 20px;
-  height: 120px;
+  height: 118px;
   display: flex;
   flex-direction: column;
   justify-content: center;
