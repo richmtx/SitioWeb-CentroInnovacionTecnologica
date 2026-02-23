@@ -1,10 +1,11 @@
 import { Component, AfterViewInit, ElementRef, Inject, PLATFORM_ID } from '@angular/core';
 import { isPlatformBrowser } from '@angular/common';
 import { FooterComponent } from "../../components/footer/footer.component";
+import { NavbarComponent } from "../../components/navbar/navbar.component";
 
 @Component({
   selector: 'app-proyectos',
-  imports: [FooterComponent],
+  imports: [FooterComponent, NavbarComponent],
   templateUrl: './proyectos.component.html',
   styleUrl: './proyectos.component.css'
 })

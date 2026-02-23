@@ -2,10 +2,11 @@ import { Component, AfterViewInit, ElementRef, QueryList, ViewChildren, Inject, 
 import { isPlatformBrowser } from '@angular/common';
 import { FooterComponent } from "../../components/footer/footer.component";
 import { MapaComponent } from "../../components/mapa/mapa.component";
+import { NavbarComponent } from "../../components/navbar/navbar.component";
 
 @Component({
   selector: 'app-index',
-  imports: [FooterComponent, MapaComponent],
+  imports: [FooterComponent, MapaComponent, NavbarComponent],
   templateUrl: './index.component.html',
   styleUrl: './index.component.css'
 })

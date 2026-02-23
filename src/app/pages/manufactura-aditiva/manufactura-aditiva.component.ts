@@ -1,10 +1,11 @@
 import { Component, AfterViewInit, OnDestroy, Inject, PLATFORM_ID } from '@angular/core';
 import { isPlatformBrowser } from '@angular/common';
 import { FooterComponent } from "../../components/footer/footer.component";
+import { NavbarComponent } from "../../components/navbar/navbar.component";
 
 @Component({
   selector: 'app-manufactura-aditiva',
-  imports: [FooterComponent],
+  imports: [FooterComponent, NavbarComponent],
   templateUrl: './manufactura-aditiva.component.html',
   styleUrl: './manufactura-aditiva.component.css'
 })

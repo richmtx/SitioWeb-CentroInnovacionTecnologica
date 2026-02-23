@@ -5,11 +5,12 @@ import {
 
 import { isPlatformBrowser } from '@angular/common';
 import { FooterComponent } from "../../components/footer/footer.component";
+import { NavbarComponent } from "../../components/navbar/navbar.component";
 
 @Component({
   selector: 'app-capacitaciones',
   standalone: true,
-  imports: [FooterComponent],
+  imports: [FooterComponent, NavbarComponent],
   templateUrl: './capacitaciones.component.html',
   styleUrl: './capacitaciones.component.css'
 })
