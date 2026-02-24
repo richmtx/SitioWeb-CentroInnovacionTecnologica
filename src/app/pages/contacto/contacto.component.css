@@ -1,0 +1,147 @@
+
+/* DIRECTORIO */
+
+.directory-section {
+    margin-top: 0px;
+    padding: 120px 8%;
+    background-color: #ffffff;
+    position: relative;
+}
+
+.directory-section::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 400px;
+    height: 400px;
+    background: #611232;
+    opacity: 0.05;
+    border-radius: 50%;
+    filter: blur(100px);
+    z-index: 0;
+}
+
+.directory-title {
+    font-size: 3rem;
+    font-weight: 700;
+    margin-bottom: 70px;
+    color: #111;
+    position: relative;
+    z-index: 1;
+}
+
+.directory-title::after {
+    content: "";
+    display: block;
+    width: 150px;
+    height: 4px;
+    background: #611232;
+    margin-top: 14px;
+    border-radius: 4px;
+}
+
+.directory-row {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    gap: 20px;
+    margin-bottom: 40px;
+    align-items: stretch;
+    position: relative;
+    z-index: 1;
+}
+
+.directory-row.reverse {
+    grid-template-columns: 1fr 2fr;
+}
+
+.directory-info {
+    background: #ffffff;
+    padding: 40px;
+    border-radius: 24px;
+    box-shadow: 0 20px 50px rgba(0,0,0,0.05);
+    transition: all 0.4s ease;
+    border: 2px solid rgba(0,0,0,0.05);
+}
+
+.directory-info:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 30px 70px rgba(97, 18, 50, 0.15);
+}
+
+.directory-info h2 {
+    font-size: 1.6rem;
+    margin-bottom: 20px;
+    color: #111;
+}
+
+.directory-info p {
+    color: #555;
+    font-size: 1rem;
+    line-height: 1.6;
+}
+
+.directory-info .email a {
+    color: #611232;
+    font-weight: 600;
+    text-decoration: none;
+    position: relative;
+}
+
+.directory-info .email a::after {
+    content: "";
+    position: absolute;
+    width: 0%;
+    height: 2px;
+    background: #611232;
+    left: 0;
+    bottom: -3px;
+    transition: 0.3s ease;
+}
+
+.directory-info .email a:hover::after {
+    width: 100%;
+}
+
+.directory-image {
+    border-radius: 24px;
+    overflow: hidden;
+    height: 300px;
+    position: relative;
+}
+
+.directory-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.6s ease;
+}
+
+.directory-image:hover img {
+    transform: scale(1.08);
+}
+
+.directory-banner {
+    height: 350px;
+    margin: 50px 0;
+    border-radius: 30px;
+    overflow: hidden;
+    box-shadow: 0 30px 60px rgba(0,0,0,0.08);
+}
+
+.directory-banner img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.scroll-animate {
+    opacity: 0;
+    transform: translateY(60px);
+    transition: opacity 1s ease, transform 1s ease;
+}
+
+.scroll-animate.show {
+    opacity: 1;
+    transform: translateY(0);
+}
